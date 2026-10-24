@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">MyPortfolio.</a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle"
+                aria-label="Switch color theme">☀️</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="tagline">Welcome!</p>
+                <h1>Hello, I'm <span>Charlemagne!</span></h1>
+                <p>
+                    I'm learning to build creative, responsive,
+                    and user-friendly websites using HTML, CSS,
+                    and JavaScript.
+                </p>
+                <a href="#projects" class="btn">View My Projects</a>
+                <a href="cv.pdf" class="btn btn-outline" download>
+                    Download My CV
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img src="profile.jpg" alt="My profile picture">
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>
+                I'm a beginner front-end developer who enjoys
+                learning how websites work. I'm currently
+                improving my coding skills by building projects
+                and practicing every day.
+            </p>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <h2>My Skills</h2>
+            <p class="section-description">
+                These percentages represent my current self-assessment,
+                not a formal test of my abilities.
+            </p>
+
+            <div class="skills-container">
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>HTML</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="--level: 70%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>CSS</span>
+                        <span>55%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="--level: 55%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <span>35%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="--level: 35%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Responsive Design</span>
+                        <span>45%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="--level: 45%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+<!-- Projects -->
+<section id="projects" class="section">
+    <h2>My Projects</h2>
+
+    <div class="project-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+            <h3>Personal Portfolio</h3>
+            <p>
+                A personal website showcasing my skills,
+                projects, and information about me.
+            </p>
+            <span class="project-tag">HTML • CSS • JavaScript</span>
+
+            <div class="project-buttons">
+                <a
+                    href="https://github.com/YOUR-USERNAME/my-portfolio"
+                    class="project-btn github-btn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    GitHub ↗
+                </a>
+
+                <a
+                    href="YOUR-LIVE-WEBSITE-URL"
+                    class="project-btn demo-btn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Live Demo ↗
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+            <h3>To-Do List</h3>
+            <p>
+                A task management app that helps users
+                organize their daily activities.
+            </p>
+            <span class="project-tag">HTML • CSS • JavaScript</span>
+
+            <div class="project-buttons">
+                <a
+                    href="https://github.com/YOUR-USERNAME/todo-list"
+                    class="project-btn github-btn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    GitHub ↗
+                </a>
+
+                <a
+                    href="YOUR-TODO-LIST-URL"
+                    class="project-btn demo-btn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Live Demo ↗
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+            <h3>Coming Soon</h3>
+            <p>
+                My next project will be added here as
+                I continue learning web development.
+            </p>
+            <span class="project-tag">In Progress</span>
+        </article>
+
+    </div>
+</section>
+
+
+        <!-- Contact -->
+        <section id="contact" class="section contact">
+            <h2>Contact Me</h2>
+            <p>Have a project idea or opportunity? Feel free to reach out.</p>
+            <a href="mailto:olivarcharles07@gmail.com" class="btn">
+                Email Me
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Your Name. Built with HTML, CSS & JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
