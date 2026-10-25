@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Charles Olivar — IT student and aspiring developer. Explore projects, skills, and ways to connect.">
+  <meta name="theme-color" content="#090b14">
+  <title>Charles Olivar | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+  <header class="site-header">
+    <nav class="nav-wrap" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Charles Olivar home"><span class="brand-mark">&lt;/&gt;</span><span>charles<span class="brand-dot">.</span>dev</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu"><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">☼</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> IT STUDENT · ASPIRING DEVELOPER</p>
+        <h1>Turning curiosity<br>into <span class="gradient-text">working code.</span></h1>
+        <p class="hero-description">I'm Charles, an Information Technology student learning by building practical projects, exploring new tools, and solving problems one step at a time.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my projects <span aria-hidden="true">↘</span></a>
+          <a class="button button-ghost" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta"><span><span class="meta-symbol">⌘</span> Always learning</span><span><span class="meta-symbol">⌁</span> Built with curiosity</span></div>
+      </div>
+      <div class="terminal-wrap reveal" aria-label="Decorative code editor illustration">
+        <div class="terminal-card">
+          <div class="terminal-top"><div class="window-dots"><i></i><i></i><i></i></div><span>charles.py</span><span class="terminal-language">PYTHON</span></div>
+          <div class="terminal-body">
+            <div class="line"><span class="line-no">01</span><span><b class="code-purple">class</b> <b class="code-yellow">Developer</b>:</span></div>
+            <div class="line"><span class="line-no">02</span><span class="indent"><b class="code-purple">def</b> <b class="code-blue">__init__</b>(self):</span></div>
+            <div class="line"><span class="line-no">03</span><span class="indent more"><span class="code-pink">self.name</span> = <span class="code-green">"Charles"</span></span></div>
+            <div class="line"><span class="line-no">04</span><span class="indent more"><span class="code-pink">self.focus</span> = <span class="code-green">"Learning by building"</span></span></div>
+            <div class="line"><span class="line-no">05</span><span class="indent more"><span class="code-pink">self.status</span> = <span class="code-green">"In progress"</span></span></div>
+            <div class="line blank"><span class="line-no">06</span><span></span></div>
+            <div class="line"><span class="line-no">07</span><span><b class="code-purple">def</b> <b class="code-blue">next_step</b>(self):</span></div>
+            <div class="line"><span class="line-no">08</span><span class="indent"><b class="code-purple">return</b> <span class="code-green">"Keep building."</span><span class="cursor"></span></span></div>
+          </div>
+          <div class="terminal-bottom"><span><span class="terminal-live"></span> Ready to learn</span><span>UTF-8&nbsp; · &nbsp;Python</span></div>
+        </div>
+        <div class="floating-chip chip-top"><span>✳</span> curious mind</div>
+        <div class="floating-chip chip-bottom"><span>↗</span> progress over perfection</div>
+      </div>
+      <a class="scroll-cue" href="#about"><span></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="section-wrap section-block" id="about">
+      <div class="section-heading reveal"><p class="eyebrow">01 / A LITTLE ABOUT ME</p><h2>Learning today.<br><span class="gradient-text">Building for tomorrow.</span></h2></div>
+      <div class="about-layout">
+        <div class="about-copy reveal"><p>I'm currently studying for a Bachelor of Science in Information Technology. I enjoy exploring how software works and turning lessons from class into small, useful applications.</p><p>I'm still growing as a developer, so every project is a chance to practice, make mistakes, and improve. I'm especially interested in programming, databases, web development, and problem-solving.</p><div class="honesty-note"><span>✳</span><p><strong>My approach</strong><br>Stay curious, keep practicing, and be honest about what I know—and what I'm still learning.</p></div></div>
+        <div class="about-facts reveal"><div class="fact-card"><span class="fact-icon">⌘</span><div><strong>Currently studying</strong><span>Information Technology</span></div></div><div class="fact-card"><span class="fact-icon">⌁</span><div><strong>Learning by doing</strong><span>Small projects, steady progress</span></div></div><div class="fact-card"><span class="fact-icon">◎</span><div><strong>Interested in</strong><span>Software, web & databases</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block" id="skills">
+      <div class="section-heading reveal"><p class="eyebrow">02 / TOOLS IN MY TOOLBOX</p><h2>Things I'm <span class="gradient-text">working with.</span></h2><p class="section-intro">A snapshot of technologies I've practiced in coursework and personal projects. My skills are still developing.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><div class="skill-icon">Py</div><div><h3>Python</h3><p>Beginner projects and GUI practice</p></div><span class="skill-level">Learning</span></article>
+        <article class="skill-card reveal"><div class="skill-icon">&lt;/&gt;</div><div><h3>HTML & CSS</h3><p>Responsive pages and styling</p></div><span class="skill-level">Practicing</span></article>
+        <article class="skill-card reveal"><div class="skill-icon">DB</div><div><h3>SQL & Databases</h3><p>Queries, tables and data modeling</p></div><span class="skill-level">Learning</span></article>
+        <article class="skill-card reveal"><div class="skill-icon">JS</div><div><h3>JavaScript</h3><p>Web interactivity fundamentals</p></div><span class="skill-level">Learning</span></article>
+        <article class="skill-card reveal"><div class="skill-icon">⌘</div><div><h3>Git & GitHub</h3><p>Version control and publishing projects</p></div><span class="skill-level">Practicing</span></article>
+        <article class="skill-card reveal"><div class="skill-icon">UI</div><div><h3>Problem-solving</h3><p>Breaking tasks into manageable steps</p></div><span class="skill-level">Always improving</span></article>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block" id="projects">
+      <div class="section-heading project-heading reveal"><div><p class="eyebrow">03 / SELECTED WORK</p><h2>Projects & <span class="gradient-text">practice.</span></h2></div><p class="section-intro">Coursework and practice projects that show what I'm learning. Replace or expand these cards as your portfolio grows.</p></div>
+      <div class="projects-grid">
+        <article class="project-card reveal"><div class="project-art art-tree"><span class="art-kicker">PYTHON / DATA STRUCTURES</span><div class="tree-visual"><span>50</span><div><i>30</i><i>70</i></div><div class="tree-leaves"><i>20</i><i>40</i><i>60</i><i>80</i></div></div><span class="art-caption">binary search tree</span></div><div class="project-content"><div class="project-tags"><span>Python</span><span>Tkinter</span><span>DSA</span></div><h3>Binary Search Tree Visualizer</h3><p>A learning project to insert values into a binary search tree, explore traversals, and display the structure through a GUI.</p><div class="project-links"><a href="https://github.com/CharlesOlivar006" target="_blank" rel="noreferrer">View GitHub <span>↗</span></a></div></div></article>
+        <article class="project-card reveal"><div class="project-art art-inventory"><span class="art-kicker">WEB / DATABASES</span><div class="inventory-window"><div class="inventory-bar"><i></i><i></i><i></i><span>inventory dashboard</span></div><div class="inventory-content"><div class="inventory-stat"><small>ITEMS</small><b>024</b></div><div class="inventory-stat"><small>STOCK</small><b>086</b></div><div class="inventory-row"></div><div class="inventory-row short"></div><div class="inventory-row"></div></div></div><span class="art-caption">organize · track · update</span></div><div class="project-content"><div class="project-tags"><span>HTML/CSS</span><span>SQL</span><span>CRUD</span></div><h3>Inventory Management Concept</h3><p>A practice concept for organizing products and tracking stock. Add your repository or live demo when your implementation is ready.</p><div class="project-links"><a href="https://github.com/CharlesOlivar006" target="_blank" rel="noreferrer">View GitHub <span>↗</span></a></div></div></article>
+        <article class="project-card reveal"><div class="project-art art-web"><span class="art-kicker">WEB / PERSONAL BRAND</span><div class="web-window"><div class="web-top"><i></i><i></i><i></i></div><div class="web-body"><span class="web-mini-label">HELLO, WORLD</span><b>Ideas into<br><em>experiences.</em></b><span class="web-line"></span><span class="web-line tiny"></span></div></div><span class="art-caption">design · code · iterate</span></div><div class="project-content"><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><h3>Personal Portfolio</h3><p>This portfolio is a work in progress to present my background, learning journey, and selected projects in one place.</p><div class="project-links"><a href="https://github.com/CharlesOlivar006/My-portfolio" target="_blank" rel="noreferrer">View repository <span>↗</span></a><a href="https://charlesolivar006.github.io/My-portfolio/" target="_blank" rel="noreferrer">Live site <span>↗</span></a></div></div></article>
+      </div>
+      <p class="project-footnote">Note: The first two cards are descriptions/concepts. Link to the exact project repositories once you've uploaded them.</p>
+    </section>
+
+    <section class="contact-section section-wrap" id="contact">
+      <div class="contact-panel reveal"><div class="contact-orb"></div><p class="eyebrow">04 / SAY HELLO</p><h2>Have an idea?<br><span class="gradient-text">Let's connect.</span></h2><p>I'm open to learning opportunities, collaboration on student projects, and connecting with people who enjoy building things.</p><div class="contact-actions"><a class="button button-primary" href="mailto:YOUR_EMAIL@example.com">Email me <span>↗</span></a><a class="button button-ghost" href="https://github.com/CharlesOlivar006" target="_blank" rel="noreferrer">GitHub profile <span>↗</span></a></div><p class="edit-reminder">Before publishing, replace the placeholder email address in this page with your real contact email.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">&lt;/&gt;</span><span>charles<span class="brand-dot">.</span>dev</span></a><p>Designed and built while learning. © <span id="year"></span> Charles Olivar</p><a class="back-top" href="#home">Back to top ↑</a></footer>
+</body>
+</html>
