@@ -661,78 +661,52 @@ footer {
 
 /* =========================================
    PORTFOLIO BACKGROUND — MIDNIGHT MIX
-   Subtle gradients + soft glow + tech grid
+   Theme-aware gradients + subtle tech grid
    ========================================= */
 
-html {
-    scroll-behavior: smooth;
-}
-
+/* The existing theme variables above control the base colors.
+   These extra variables let the decorative background follow them. */
 body {
+    --glow-one: rgba(35, 100, 210, 0.13);
+    --glow-two: rgba(25, 75, 155, 0.10);
+    --glow-three: rgba(35, 70, 145, 0.08);
+    --grid-line: rgba(130, 170, 255, 0.035);
+
     position: relative;
     isolation: isolate;
     overflow-x: hidden;
-
-    /* Keep the original dark navy identity */
-    background-color: #080f20;
-
-    /* Soft blue lighting across the whole page */
+    background-color: var(--bg);
     background-image:
-        radial-gradient(
-            ellipse at 12% 8%,
-            rgba(35, 100, 210, 0.13),
-            transparent 38%
-        ),
-        radial-gradient(
-            ellipse at 88% 35%,
-            rgba(25, 75, 155, 0.10),
-            transparent 34%
-        ),
-        radial-gradient(
-            ellipse at 50% 90%,
-            rgba(35, 70, 145, 0.08),
-            transparent 42%
-        );
-
+        radial-gradient(ellipse at 12% 8%, var(--glow-one), transparent 38%),
+        radial-gradient(ellipse at 88% 35%, var(--glow-two), transparent 34%),
+        radial-gradient(ellipse at 50% 90%, var(--glow-three), transparent 42%);
     background-attachment: fixed;
 }
 
-/* Faint technical grid across the entire website */
+/* Light-mode values match the existing body.light-mode toggle */
+body.light-mode {
+    --glow-one: rgba(0, 130, 220, 0.09);
+    --glow-two: rgba(100, 130, 220, 0.07);
+    --glow-three: rgba(0, 160, 200, 0.05);
+    --grid-line: rgba(20, 60, 110, 0.045);
+}
+
+/* Faint technical grid */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-
     background-image:
-        linear-gradient(
-            rgba(130, 170, 255, 0.035) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(130, 170, 255, 0.035) 1px,
-            transparent 1px
-        );
-
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 42px 42px;
-
-    /* Fade the grid near the edges */
-    -webkit-mask-image: radial-gradient(
-        ellipse at center,
-        black 20%,
-        transparent 85%
-    );
-
-    mask-image: radial-gradient(
-        ellipse at center,
-        black 20%,
-        transparent 85%
-    );
+    -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 85%);
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 85%);
 }
 
-/* Large, blurred blue glow behind the content */
+/* Soft decorative glow */
 body::after {
     content: "";
     position: fixed;
@@ -742,28 +716,66 @@ body::after {
     right: -180px;
     z-index: -1;
     pointer-events: none;
-
-    background: rgba(38, 100, 220, 0.10);
+    background: var(--glow-one);
     border-radius: 50%;
     filter: blur(90px);
 }
 
-/* Keep content above the decorative background */
-body > * {
-    position: relative;
-}
-
-/* Give existing sections a little visual separation.
-   Transparent backgrounds allow the new design to show. */
+/* Let the background show through section areas */
 section {
     background-color: transparent;
 }
 
-/* Respect visitors who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
+/* Make the newer project cards respect light mode too */
+body.light-mode .projects-heading h2 {
+    color: var(--text);
+}
+
+body.light-mode .projects-heading p {
+    color: var(--muted);
+}
+
+body.light-mode .project-card-new {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+body.light-mode .project-preview {
+    background: #e2e8f0;
+    border-bottom-color: var(--border);
+}
+
+body.light-mode .project-info h3 {
+    color: var(--text);
+}
+
+body.light-mode .project-info p {
+    color: var(--muted);
+}
+
+body.light-mode .project-number {
+    color: #0f172a;
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(100, 116, 139, 0.35);
+}
+
+body.light-mode .section-label,
+body.light-mode .projects-heading h2 span {
+    color: var(--accent);
+}
+
+body.light-mode .project-tags span {
+    color: #0369a1;
+    background: rgba(2, 132, 199, 0.08);
+    border-color: rgba(2, 132, 199, 0.2);
+}
+
+body.light-mode .project-actions a {
+    color: #0369a1;
+}
+
+body.light-mode .project-actions a:hover {
+    color: #075985;
 }
 
 /* Mobile optimization */
