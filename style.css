@@ -455,6 +455,15 @@ footer {
     align-items: stretch;
 }
 
+.project-card-new {
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Individual project card */
 
 .project-card-new {
