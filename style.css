@@ -490,12 +490,14 @@ footer {
 
 /* Website screenshot */
 
+
 .project-preview {
     position: relative;
-    height: 210px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
-    background: #111c2e;
-    border-bottom: 1px solid #30415a;
+    background: #111827;
+    border-radius: 12px 12px 0 0;
 }
 
 .project-preview img {
@@ -504,8 +506,6 @@ footer {
     height: 100%;
     object-fit: cover;
     object-position: top center;
-
-    transition: transform 0.35s ease;
 }
 
 .project-card-new:hover .project-preview img {
