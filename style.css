@@ -658,3 +658,129 @@ footer {
         transform: none;
     }
 }
+
+/* =========================================
+   PORTFOLIO BACKGROUND — MIDNIGHT MIX
+   Subtle gradients + soft glow + tech grid
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+    overflow-x: hidden;
+
+    /* Keep the original dark navy identity */
+    background-color: #080f20;
+
+    /* Soft blue lighting across the whole page */
+    background-image:
+        radial-gradient(
+            ellipse at 12% 8%,
+            rgba(35, 100, 210, 0.13),
+            transparent 38%
+        ),
+        radial-gradient(
+            ellipse at 88% 35%,
+            rgba(25, 75, 155, 0.10),
+            transparent 34%
+        ),
+        radial-gradient(
+            ellipse at 50% 90%,
+            rgba(35, 70, 145, 0.08),
+            transparent 42%
+        );
+
+    background-attachment: fixed;
+}
+
+/* Faint technical grid across the entire website */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(130, 170, 255, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(130, 170, 255, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+
+    /* Fade the grid near the edges */
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        black 20%,
+        transparent 85%
+    );
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        black 20%,
+        transparent 85%
+    );
+}
+
+/* Large, blurred blue glow behind the content */
+body::after {
+    content: "";
+    position: fixed;
+    width: 340px;
+    height: 340px;
+    top: 20%;
+    right: -180px;
+    z-index: -1;
+    pointer-events: none;
+
+    background: rgba(38, 100, 220, 0.10);
+    border-radius: 50%;
+    filter: blur(90px);
+}
+
+/* Keep content above the decorative background */
+body > * {
+    position: relative;
+}
+
+/* Give existing sections a little visual separation.
+   Transparent backgrounds allow the new design to show. */
+section {
+    background-color: transparent;
+}
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    body::before {
+        background-size: 32px 32px;
+        opacity: 0.75;
+    }
+
+    body::after {
+        width: 230px;
+        height: 230px;
+        right: -150px;
+        filter: blur(70px);
+    }
+}
